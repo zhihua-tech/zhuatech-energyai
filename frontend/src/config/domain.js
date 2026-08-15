@@ -1,0 +1,28 @@
+/* Copyright 2026 上海如静知华信息科技有限公司 */
+export const domain={
+ code:'ENERGYAI',systemName:'知华能源优化 AI 平台',englishName:'ENERGY OPTIMIZATION AI',theme:{primary:'#176b68',dark:'#123c44',accent:'#e3a54b'},
+ workspace:'集团能源中心 / 智慧用能组',fieldWorkspace:'华东工厂 / 能源运行班',period:'2026-08-15 · 日内滚动',liveText:'能源数据于 10:42 更新',fieldContextLabel:'当前周期',fieldContext:'峰段 10:00—12:00',fieldUser:'林峤',fieldRole:'能源工程师',adminUser:'许澄',adminRole:'能源运营负责人',
+ adminTitle:'集团能效运营中心',adminBreadcrumb:'能源智能 / 全域能效',adminSubtitle:'汇聚电、水、气与生产负荷，识别能耗偏差并生成可执行的削峰与节能方案。',exportAction:'导出能效报告',createAction:'新建优化任务',
+ chartTitle:'单位产出能耗趋势',chartSubtitle:'实际值 / 能效基线',chartLabels:['01日','05日','09日','13日','17日','21日','25日','29日','31日'],loadTitle:'园区负荷占比',loadSubtitle:'当前峰值与合同容量利用情况',recordsTitle:'重点节能优化任务',recordsSubtitle:'按节能潜力、峰值影响和执行窗口排序',issueTitle:'需要处理的能效偏差',issueSubtitle:'来自计量异常、峰值负荷和能源成本',
+ recordName:'优化任务',itemName:'能源对象',unitName:'责任单元',batchName:'数据口径',planName:'分析项',doneName:'已验证',exceptionName:'偏差',unitLabel:'项',
+ listBreadcrumb:'能源智能 / 优化任务',listSubtitle:'将生产计划、计量数据、费率和设备状态转化为可解释的节能优先级。',listSummary:[['接入计量点','318'],['本月优化','42'],['高潜力','9',true],['已闭环','27']],tabs:['全部','待分析','执行中','待验证','已归档'],
+ fieldBreadcrumb:'运行工作台 / 能源工程师',fieldTitle:'能源优化工作台',fieldSubtitle:'负责园区 4 个 · 今日任务 8 项 · 待确认建议 3 条',fieldSecondary:'查看负荷曲线',reportAction:'提交优化反馈',fieldNoticeTitle:'计量链路运行正常',fieldNotice:'关键计量覆盖率 97.8%',
+ steps:['数据采集','基线比对','机会识别','方案确认','效果验证'],documentAction:'查看能源档案',printAction:'导出节能任务单',resourceCardTitle:'能源数据资源',resourceValueLabel:'在线计量点',resourceHealthLabel:'数据健康度',quickSubtitle:'常用能源入口',
+ quickActions:[['能效分析','/shopfloor/report','基线、产量与费率证据'],['能源台账','/shopfloor/material','园区、介质和计量层级'],['计量资源','/shopfloor/resources','电表、网关和算法版本'],['偏差升级','/shopfloor/andon','高峰负荷与异常用能协同']],
+ reportDefaults:[5,1],reportTitle:'节能任务反馈',reportSubtitle:'记录执行动作、基线修正与节能量验证。',reportSuccess:'能源优化反馈已提交',reportPlaceholder:'填写执行时段、调整动作、实测能耗和验证结论',reportFootnote:'提交后进入能源运营负责人复核队列',ruleTitle:'能源优化决策门禁',ruleSubtitle:'ENERGY-AI · V1.0',rules:[['计量完整','缺失数据不得结算'],['停机调整','生产共同批准'],['节能量','基线口径可追溯'],['效果验证','执行后复核',true]],fieldTotals:[['8','今日任务'],['3','待确认建议'],['318','在线计量点'],['97.8%','计量覆盖率']],
+ adminMenus:[['/admin','home','能效运营中心'],['/admin/work-orders','order','优化任务'],['/admin/samples','box','能源对象'],['/admin/schedule','calendar','执行窗口'],['/admin/methods','process','基线规则'],['/admin/reviews','quality','节能验证'],['/admin/resources','machine','计量资源'],['/admin/report','chart','能效分析']],fieldMenus:[['/shopfloor','home','优化工作台'],['/shopfloor/report','report','执行反馈'],['/shopfloor/tasks','order','我的任务'],['/shopfloor/material','box','能源档案'],['/shopfloor/resources','machine','计量状态'],['/shopfloor/andon','risk','偏差升级',3]],
+ moduleTitles:{tasks:['我的优化任务','查看节能潜力、时段和执行状态'],material:['能源对象台账','查看园区、介质、计量点和基线'],resources:['计量资源中心','管理表计、网关和优化模型'],andon:['用能偏差升级','提交高峰风险和计量异常'],samples:['能源对象台账','统一管理用能单元和生产关联'],schedule:['优化执行窗口','协调生产节拍、峰谷时段与设备'],methods:['能效基线规则','维护基线、费率和核算口径'],reviews:['节能量验证','记录确认、驳回和补充计量'],report:['能效经营分析','分析能耗、成本和碳排改善']},
+ tagline:'让每一度能源，都对应清晰的产出价值',storyTitle:'把用能偏差，<br/>变成可验证的节能行动',storyText:'融合生产负荷、计量数据和峰谷费率，帮助能源团队找到节能机会并保留人工审批。',pattern:[1,4,7,10,13,16,19,22,25,28,31],loginStats:[['318','接入计量点'],['97.8%','数据覆盖率'],['9','高潜力任务']],loginTitle:'集团能效运营中心',adminDemo:'能耗 / 成本 / 优化',fieldDemo:'任务 / 执行 / 验证'}
+export const records=[
+ {no:'EO-260815-018',name:'一号注塑车间峰值优化',code:'PLANT-SH-01',unit:'华东能源组',group:'上海园区',plan:12,done:8,exception:3,due:'08-15',batch:'电力+产量',status:'执行中',progress:68,priority:'高潜力'},
+ {no:'EO-260815-021',name:'空压站联控策略校准',code:'AIR-SYS-02',unit:'公辅运行组',group:'苏州园区',plan:9,done:5,exception:1,due:'08-16',batch:'压力+流量',status:'待验证',progress:56,priority:'关注'},
+ {no:'EO-260815-026',name:'冷站夜间负荷迁移',code:'CHILLER-03',unit:'暖通能源组',group:'杭州园区',plan:10,done:2,exception:2,due:'08-16',batch:'温度+费率',status:'待分析',progress:20,priority:'高潜力'},
+ {no:'EO-260814-015',name:'仓储照明分区优化',code:'LIGHT-WH-12',unit:'设施管理组',group:'上海园区',plan:8,done:8,exception:0,due:'08-14',batch:'照度+时段',status:'已归档',progress:100,priority:'正常'},
+ {no:'EO-260815-031',name:'光伏自用率提升方案',code:'PV-SZ-06',unit:'绿色能源组',group:'深圳园区',plan:11,done:7,exception:1,due:'08-17',batch:'光伏+负荷',status:'执行中',progress:64,priority:'关注'}]
+export const resources=[{code:'METER-01',name:'集团智能计量平台',unit:'能源数字化组',status:'运行中',health:99,value:'318',valueUnit:'点',note:'最近十五分钟完整率 99.6%'},{code:'MODEL-02',name:'能效基线与优化模型',unit:'能源策略组',status:'复核中',health:94,value:'v2.8',valueUnit:'',note:'9 个对象进入高潜力队列'},{code:'PRICE-03',name:'分时电价连接器',unit:'能源结算组',status:'运行中',health:97,value:'12',valueUnit:'区域',note:'次日电价策略已同步'}]
+export const reviews=[{no:'EV-260815-032',title:'注塑车间削峰方案验证',type:'节能量确认',detail:'预计 1,212 kWh · 许澄',result:'待确认'},{no:'EV-260815-011',title:'空压站压力下调复核',type:'现场验证',detail:'3 个运行周期 · 林峤',result:'通过'},{no:'EV-260814-018',title:'冷站基线口径修正',type:'证据补充',detail:'缺少湿球温度数据',result:'异常'}]
+export const adminMetrics=[['今日用电','86.4 MWh','较基线下降 4.8%','blue'],['节能机会','9 项','预计节省 12.6 MWh','green'],['当前峰值','3,820 kW','合同容量利用 84%','orange'],['待验节能量','6.8 MWh','4 项需要复核','red']]
+export const fieldMetrics=[['我的任务','8','3 项高潜力','blue'],['今日已执行','5','全部保留计量证据','green'],['待确认建议','3','1 项涉及主线','orange'],['计量覆盖率','97.8%','较上周提升 0.6%','slate']]
+export const chartActual=[89,87,86,84,82,81,79,77,75],chartTarget=[90,88,86,84,82,80,78,76,74]
+export const loads=[['上海园区',86,'峰值 1,260 kW'],['苏州园区',72,'峰值 980 kW'],['杭州园区',64,'峰值 760 kW'],['深圳园区',58,'峰值 620 kW']]
+export const issues=[['峰值','上海园区负荷接近需量阈值','建议延后冷站蓄冷启动','待批准'],['计量','杭州冷站二级表连续丢数','已切换网关缓存回补','处理中'],['费率','深圳园区次日尖峰时段调整','需更新自动调度策略','需协调']].map(x=>({type:x[0],title:x[1],detail:x[2],status:x[3]}))
