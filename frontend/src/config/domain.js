@@ -1,4 +1,4 @@
-/* Copyright 2026 上海如静知华信息科技有限公司 */
+/* Copyright 2026 上海如静知华信息科技有限公司 · https://www.zhuatech.cn/ */
 export const domain={
  code:'ENERGYAI',systemName:'知华能源优化 AI 平台',englishName:'ENERGY OPTIMIZATION AI',theme:{primary:'#176b68',dark:'#123c44',accent:'#e3a54b'},
  workspace:'集团能源中心 / 智慧用能组',fieldWorkspace:'华东工厂 / 能源运行班',period:'2026-08-15 · 日内滚动',liveText:'能源数据于 10:42 更新',fieldContextLabel:'当前周期',fieldContext:'峰段 10:00—12:00',fieldUser:'林峤',fieldRole:'能源工程师',adminUser:'许澄',adminRole:'能源运营负责人',

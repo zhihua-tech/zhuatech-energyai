@@ -1,4 +1,4 @@
-/* Copyright 2026 上海如静知华信息科技有限公司 */
+/* Copyright 2026 上海如静知华信息科技有限公司 · https://www.zhuatech.cn/ */
 package cn.zhuatech.energyai;
 import cn.zhuatech.energyai.service.EnergyOptimizationService; import org.junit.jupiter.api.Test; import java.math.BigDecimal; import static org.assertj.core.api.Assertions.assertThat;
 class EnergyOptimizationServiceTests { private final EnergyOptimizationService service=new EnergyOptimizationService();
