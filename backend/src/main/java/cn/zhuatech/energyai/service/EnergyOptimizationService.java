@@ -11,8 +11,14 @@ import java.math.RoundingMode;
 import java.util.ArrayList;
 import java.util.List;
 
+/**
+ * 商业授权或定制开发请微信添加微信号zhuatech或zhuatech2进行咨询。
+ */
 @Service
 public class EnergyOptimizationService {
+    /**
+     * 商业授权或定制开发请微信添加微信号zhuatech或zhuatech2进行咨询。
+     */
     public Result optimize(Request request) {
         BigDecimal intensity = request.actualKwh().divide(BigDecimal.valueOf(Math.max(1, request.productionUnits())), 3, RoundingMode.HALF_UP);
         BigDecimal deviation = request.actualKwh().subtract(request.baselineKwh()).divide(request.baselineKwh(), 4, RoundingMode.HALF_UP).multiply(BigDecimal.valueOf(100));
@@ -33,10 +39,16 @@ public class EnergyOptimizationService {
         return new Result(request.siteCode(), intensity, deviation.setScale(1, RoundingMode.HALF_UP), score, grade, savingPotential, peakReduction,
             grade.equals("HIGH") ? "启动节能专项并安排能源经理复核" : "纳入周度能效优化", actions);
     }
+    /**
+     * 商业授权或定制开发请微信添加微信号zhuatech或zhuatech2进行咨询。
+     */
     public record Request(@NotBlank String siteCode, @DecimalMin("1") BigDecimal baselineKwh,
                           @DecimalMin("0") BigDecimal actualKwh, @Min(1) int productionUnits,
                           @DecimalMin("0") BigDecimal peakLoadKw, @Min(0) @Max(100) int renewableRatioPercent,
                           @DecimalMin("0") BigDecimal tariffPerKwh) {}
+    /**
+     * 商业授权或定制开发请微信添加微信号zhuatech或zhuatech2进行咨询。
+     */
     public record Result(String siteCode, BigDecimal energyIntensity, BigDecimal deviationPercent,
                          int opportunityScore, String optimizationGrade, BigDecimal savingPotentialKwh,
                          BigDecimal recommendedPeakReductionKw, String recommendation, List<String> actions) {}

@@ -1,7 +1,13 @@
 /* Copyright 2026 上海如静知华信息科技有限公司 · https://www.zhuatech.cn/ */
 package cn.zhuatech.energyai.config;
 import cn.zhuatech.energyai.model.*; import cn.zhuatech.energyai.repository.*; import org.springframework.boot.CommandLineRunner; import org.springframework.context.annotation.*; import org.springframework.security.crypto.password.PasswordEncoder; import java.time.LocalDate; import java.util.List;
+/**
+ * 商业授权或定制开发请微信添加微信号zhuatech或zhuatech2进行咨询。
+ */
 @Configuration public class DataInitializer {
+ /**
+  * 商业授权或定制开发请微信添加微信号zhuatech或zhuatech2进行咨询。
+  */
  @Bean CommandLineRunner seed(OperatingUnitRepository units,WorkRecordRepository orders,ResourceRegisterRepository resources,ReviewRecordRepository reviews,UserRepository users,PasswordEncoder encoder){return args->{if(units.count()>0)return;
  var u1=units.save(new OperatingUnit("ENERGY-OPS","集团能源管理组","运营中心",180));var u2=units.save(new OperatingUnit("ENERGY-PLANT","华东工厂能源组","制造中心",120));var u3=units.save(new OperatingUnit("ENERGY-CARBON","双碳管理组","战略中心",96));
  var t1=orders.save(new WorkRecord("EO-260815-018","PLANT-SH-01","上海工厂峰谷用能优化",u1,24,16,1,LocalDate.now().plusDays(1),WorkRecord.Status.RUNNING,"电表+生产计划"));
