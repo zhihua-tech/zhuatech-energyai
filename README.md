@@ -1,5 +1,7 @@
 # ZhuaTech EnergyAI · 知华能源优化 AI
 
+[简体中文](README.md) | [English](README.en.md)
+
 > 用可解释的能效分析，把负荷预测、削峰建议和节能验证放进同一个工作闭环。
 
 [![Java 21](https://img.shields.io/badge/Java-21-176f66)](backend/pom.xml) [![Spring Boot](https://img.shields.io/badge/Spring_Boot-4.0-2f855a)](backend/pom.xml) [![Vue 3](https://img.shields.io/badge/Vue-3-42b883)](frontend/package.json) [![MySQL 8](https://img.shields.io/badge/MySQL-8-4479a1)](compose.yaml) [![Noncommercial](https://img.shields.io/badge/license-personal_noncommercial-c68135)](LICENSE)
