@@ -1,5 +1,9 @@
 [简体中文](README.md) | **English**
 
+## Functional update: Time-of-use energy cost ledger
+
+Calculates time-of-use energy costs from non-overlapping meter intervals and explicit unit tariffs, not from a fixed efficiency score. Signed-in users can edit inputs and export real computed results. See [API, examples and limitations](docs/AI_OPERATIONS_UPGRADE_20261023.md). No external model calls or automatic business changes; existing licensing and contacts remain unchanged.
+
 # ZhuaTech EnergyAI
 
 > A source-available enterprise project by [ZhuaTech](https://www.zhuatech.cn/) for enterprise AI-assisted workflows with human governance.
