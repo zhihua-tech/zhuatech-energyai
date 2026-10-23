@@ -1,0 +1,88 @@
+{
+  "slug": "energyai",
+  "title": "储能效率损耗后的峰谷收益",
+  "fields": [
+    {
+      "key": "id",
+      "label": "记录编号",
+      "type": "ID"
+    },
+    {
+      "key": "chargeKwh",
+      "label": "充电电量kWh",
+      "type": "NUMBER",
+      "scale": 6,
+      "min": "0",
+      "max": "1000000000000"
+    },
+    {
+      "key": "efficiencyPct",
+      "label": "充放电总效率%",
+      "type": "NUMBER",
+      "scale": 4,
+      "min": "0",
+      "max": "100"
+    },
+    {
+      "key": "offPeakPrice",
+      "label": "充电电价元/kWh",
+      "type": "NUMBER",
+      "scale": 6,
+      "min": "0",
+      "max": "1000000000000"
+    },
+    {
+      "key": "peakPrice",
+      "label": "替代用电价元/kWh",
+      "type": "NUMBER",
+      "scale": 6,
+      "min": "0",
+      "max": "1000000000000"
+    },
+    {
+      "key": "cycleCost",
+      "label": "本循环折旧运维元",
+      "type": "NUMBER",
+      "scale": 2,
+      "min": "0",
+      "max": "1000000000000"
+    }
+  ],
+  "columns": [
+    {
+      "key": "usableKwh",
+      "label": "可用放电kWh"
+    },
+    {
+      "key": "avoidedPurchaseCost",
+      "label": "情景替代电费元"
+    },
+    {
+      "key": "cycleTotalCost",
+      "label": "循环总成本元"
+    },
+    {
+      "key": "scenarioContribution",
+      "label": "净贡献元"
+    }
+  ],
+  "description": "考虑充放电总效率及单次循环成本，核算峰谷电价情景净贡献；零充电量不伪造收益，不控制真实储能设备。",
+  "owner": "上海如静知华信息科技有限公司",
+  "website": "https://www.zhuatech.cn/",
+  "authorization": "商业授权或定制开发请微信添加微信号zhuatech或zhuatech2进行咨询。",
+  "version": 1,
+  "notes": "输入均须为已获授权的同口径数据。金额固定人民币元；比例为百分数。核算结果只用于复核，未审批、未写库、未发起外部调用，也未触发付款、签名、资料销毁或设备控制。建议不构成法律、安全、会计或碳核证结论。",
+  "sample": {
+    "asOf": "2026-10-24",
+    "records": [
+      {
+        "id": "ITEM-001",
+        "chargeKwh": "1000",
+        "efficiencyPct": "90",
+        "offPeakPrice": "0.3",
+        "peakPrice": "1.0",
+        "cycleCost": "200"
+      }
+    ]
+  }
+}

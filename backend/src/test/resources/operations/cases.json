@@ -1,0 +1,66 @@
+[
+  {
+    "patch": {},
+    "expected": {
+      "decision": "PASS",
+      "usableKwh": "#900",
+      "scenarioContribution": "#400"
+    },
+    "error": false
+  },
+  {
+    "patch": {
+      "efficiencyPct": "50"
+    },
+    "expected": {
+      "decision": "PASS",
+      "scenarioContribution": "#0"
+    },
+    "error": false
+  },
+  {
+    "patch": {
+      "efficiencyPct": "49.9"
+    },
+    "expected": {
+      "decision": "REVIEW"
+    },
+    "error": false
+  },
+  {
+    "patch": {
+      "efficiencyPct": "0"
+    },
+    "expected": {
+      "usableKwh": "#0",
+      "decision": "REVIEW"
+    },
+    "error": false
+  },
+  {
+    "patch": {
+      "chargeKwh": "0"
+    },
+    "expected": {
+      "scenarioContribution": "#-200",
+      "decision": "REVIEW"
+    },
+    "error": false
+  },
+  {
+    "patch": {
+      "efficiencyPct": "101"
+    },
+    "expected": {},
+    "error": true
+  },
+  {
+    "patch": {
+      "cycleCost": "0"
+    },
+    "expected": {
+      "scenarioContribution": "#600"
+    },
+    "error": false
+  }
+]
